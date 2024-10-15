@@ -77,6 +77,7 @@
         </table>
 
         <a href="cadastroMED.php" class="btn btn-primary">Cadastrar Medicamento</a>
+        <a href="menu.php" class="btn btn-secondary">Voltar ao Menu</a>
 
     </div>
 </body>

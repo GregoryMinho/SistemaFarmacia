@@ -11,14 +11,14 @@
 <body>
     <div class="container">
         <h1 class="text-center">Cadastro de Usuários (ADM)</h1>
-        <form action="index.php" method="post">
+        <form action="loginUSER.php" method="post">
             <div class="form-group">
                 <label for="username">Nome de Usuário:</label>
                 <input type="text" class="form-control" id="username" name="username" required>
             </div>
             <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="senha" class="form-control" id="senha" name="senha" required>
+                <input type="password" class="form-control" id="senha" name="senha" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>

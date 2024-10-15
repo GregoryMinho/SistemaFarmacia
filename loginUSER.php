@@ -9,14 +9,14 @@
 <body>
     <div class="container">
         <h1 class="text-center">Login</h1>
-        <form action="" method="post">
+        <form action="index.php" method="post">
             <div class="form-group">
                 <label for="username">Usuário:</label>
                 <input type="text" class="form-control" id="username" name="username" required>
             </div>
             <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="senha" class="form-control" id="senha" name="senha" required>
+                <input type="password" class="form-control" id="senha" name="senha" required>
             </div>
             <button type="submit" class="btn btn-primary">Entrar</button>
         </form>
