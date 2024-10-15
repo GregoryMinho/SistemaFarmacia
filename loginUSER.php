@@ -1,27 +1,3 @@
-<?php
-// Arquivo LoginUSER.php
-
-require 'banco.php';
-
-session_start();
-
-if (isset($_POST['username']) && isset($_POST['senha'])) {
-    $username = $_POST['username'];
-    $senha = $_POST['senha'];
-
-    if (logarUsuario($username, $senha)) {
-        // Login bem-sucedido, criar sessão e redirecionar para index.php
-        $_SESSION['username'] = $username;
-        header('Location: index.php');
-        exit();
-    } else {
-        // Login falhou, exibir mensagem de erro
-        $erro = 'Usuário ou senha incorretos!';
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
