@@ -7,20 +7,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id_medicamento = $_POST['id_medicamento'];
     $quantidade_vendida = $_POST['quantidade_vendida'];
 
-    // Verificar estoque atual
     $stmt = $pdo->prepare("SELECT quantidade_estoque FROM Medicamentos WHERE id = ?");
     $stmt->execute([$id_medicamento]);
     $medicamento = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($medicamento && $medicamento['quantidade_estoque'] >= $quantidade_vendida) {
-        // Atualizar estoque
         $novo_estoque = $medicamento['quantidade_estoque'] - $quantidade_vendida;
         $stmt = $pdo->prepare("UPDATE Medicamentos SET quantidade_estoque = ? WHERE id = ?");
         $stmt->execute([$novo_estoque, $id_medicamento]);
-
-        // Registrar venda (você pode criar uma tabela de vendas se quiser manter um registro)
-        // $stmt = $pdo->prepare("INSERT INTO Vendas (id_medicamento, quantidade_vendida, data_venda) VALUES (?, ?, NOW())");
-        // $stmt->execute([$id_medicamento, $quantidade_vendida]);
 
         $mensagem = "Venda realizada com sucesso! Estoque atualizado.";
     } else {
@@ -28,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Buscar lista de medicamentos para o select
 $stmt = $pdo->query("SELECT id, nome_medicamento FROM Medicamentos");
 $medicamentos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>

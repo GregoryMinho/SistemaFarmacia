@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Produtos</title>
+    <title>Cadastro de Medicamentos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
@@ -21,7 +21,7 @@
     $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
-    <h1 class="text-center mt-5 mb-5">FARMACIA - Cadastro de Medicamentos</h1>
+    <h1 class="text-center mt-5 mb-5">Cadastro de Medicamentos</h1>
 
     <div class="container">
         <form action="" method="get">
@@ -68,7 +68,6 @@
                         <td><?php echo $dados['categoria']; ?></td>
                         <td><?php echo $dados['data_validade']; ?></td>
                         <td>
-                            <a href="editar.php?id=<?= $dados['id']; ?>" class="btn btn-primary btn-sm">Editar</a>
                             <a href="excluir.php?id=<?= $dados['id']; ?>" class="btn btn-danger btn-sm">Excluir</a>
                         </td>
                     </tr>

@@ -42,7 +42,8 @@
 </head>
 <body>
     <div class="container menu-container">
-        <h1 class="mb-4 text-dark">Menu Principal</h1>
+        <h1 class="mb-4 text-dark">FARMÁCIA</h1>
+        <h2 class="mb-4 text-dark">Menu Principal</h2>
         
         <a href="index.php" class="btn btn-custom-blue btn-lg">
             <i class="fas fa-list-ul mr-2"></i>Lista de Medicamentos
