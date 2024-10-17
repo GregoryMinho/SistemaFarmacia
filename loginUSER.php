@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1 class="text-center">Login</h1>
-        <form action="index.php" method="post">
+        <form action="menu.php" method="post">
             <div class="form-group">
                 <label for="username">Usuário:</label>
                 <input type="text" class="form-control" id="username" name="username" required>
